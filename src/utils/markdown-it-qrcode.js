@@ -11,13 +11,12 @@ function makeRule(md) {
         const href = attr[1];
         if (href) {
           return `<section class="qrcode-root">
-          <div class="qrcode-left">
-            <strong class="qrcode-title">长按识别二维码查看原文</strong>
-            <span class="qrcode-href">${href}</span>
-          </div>
-          <div class="qrcode-right">
+          <section class="qrcode-left">
+            <strong class="qrcode-title">长按识别二维码查看原文</strong><p class="qrcode-href">${href}</p>
+          </section>
+          <section class="qrcode-right">
             <img class="qrcode-img" src="${QRCode(href)}" alt="${textContent}" />
-          </div>`;
+          </section>`;
         }
       }
       return `<section>`;

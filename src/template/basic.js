@@ -437,17 +437,16 @@ export default `/*默认样式，最佳实践*/
 
 /* 链接二维码 */
 #nice .qrcode-root {
+  height: 112px;
   border-radius: 4px;
   background: #eee;
   padding: 16px;
   display: flex;
-
 }
 #nice .qrcode-root > .qrcode-left {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding-right: 8px;
 }
 #nice .qrcode-root > .qrcode-left > .qrcode-title {
@@ -455,9 +454,15 @@ export default `/*默认样式，最佳实践*/
 }
 #nice .qrcode-root > .qrcode-left > .qrcode-href {
   color: #999;
+  padding: 0;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 #nice .qrcode-root > .qrcode-right {
-  width: 60px;
+  width: 80px;
   display: flex;
   align-items: center;
 }
