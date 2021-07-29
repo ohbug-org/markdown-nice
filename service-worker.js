@@ -11,11 +11,11 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("/workbox-v3.6.3/workbox-sw.js");
-workbox.setConfig({modulePathPrefix: "/workbox-v3.6.3"});
+importScripts("/markdown-nice/workbox-v3.6.3/workbox-sw.js");
+workbox.setConfig({modulePathPrefix: "/markdown-nice/workbox-v3.6.3"});
 
 importScripts(
-  "/precache-manifest.b2d289a54da3cd5009c311435354101c.js"
+  "/markdown-nice/precache-manifest.892b3db8774dcd6da4a13cd8b1c00f3c.js"
 );
 
 workbox.skipWaiting();
@@ -30,7 +30,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/index.html", {
+workbox.routing.registerNavigationRoute("/markdown-nice/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
