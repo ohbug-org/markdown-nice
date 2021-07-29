@@ -434,4 +434,34 @@ export default `/*默认样式，最佳实践*/
   line-height: 35px;
   z-index: 20;
 }
+
+/* 链接二维码 */
+#nice .qrcode-root {
+  border-radius: 4px;
+  background: #eee;
+  padding: 16px;
+  display: flex;
+
+}
+#nice .qrcode-root > .qrcode-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 8px;
+}
+#nice .qrcode-root > .qrcode-left > .qrcode-title {
+  color: #666;
+}
+#nice .qrcode-root > .qrcode-left > .qrcode-href {
+  color: #999;
+}
+#nice .qrcode-root > .qrcode-right {
+  width: 60px;
+  display: flex;
+  align-items: center;
+}
+#nice .qrcode-root > .qrcode-right > .qrcode-img {
+  width: 100%;
+}
 `;

@@ -14,6 +14,7 @@ import markdownItImageFlow from "./markdown-it-imageflow";
 import markdownItMultiquote from "./markdown-it-multiquote";
 import highlightjs from "./langHighlight";
 import markdownItLiReplacer from "./markdown-it-li";
+import markdownItQrCode from "./markdown-it-qrcode";
 
 export const axiosGithub = axios.create({
   baseURL: "https://api.github.com",
@@ -94,6 +95,7 @@ markdownParser
   .use(markdownItLiReplacer) // li 标签中加入 p 标签
   .use(markdownItImageFlow) // 横屏移动插件
   .use(markdownItMultiquote) // 给多级引用加 class
+  .use(markdownItQrCode) // 给多级引用加 class
   .use(markdownItImsize);
 
 export const replaceStyle = (id, css) => {
