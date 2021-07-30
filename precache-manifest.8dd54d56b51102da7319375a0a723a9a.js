@@ -20,12 +20,12 @@ self.__precacheManifest = [
     "url": "/markdown-nice/static/js/4.252e625b.chunk.js"
   },
   {
-    "revision": "086dff53e655eed77bf2",
+    "revision": "9b38f88c3ceeafaa9503",
     "url": "/markdown-nice/static/css/main.6f99cec3.chunk.css"
   },
   {
-    "revision": "086dff53e655eed77bf2",
-    "url": "/markdown-nice/static/js/main.086dff53.chunk.js"
+    "revision": "9b38f88c3ceeafaa9503",
+    "url": "/markdown-nice/static/js/main.9b38f88c.chunk.js"
   },
   {
     "revision": "05d112051d67005e13f6",
@@ -500,7 +500,7 @@ self.__precacheManifest = [
     "url": "/markdown-nice/static/js/122.840429d2.chunk.js"
   },
   {
-    "revision": "93310deaf932e3522f254caeae340735",
+    "revision": "d47cc13c5cea3407b8637dc384d29e30",
     "url": "/markdown-nice/index.html"
   }
 ];

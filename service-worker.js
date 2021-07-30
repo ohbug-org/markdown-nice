@@ -15,7 +15,7 @@ importScripts("/markdown-nice/workbox-v3.6.3/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "/markdown-nice/workbox-v3.6.3"});
 
 importScripts(
-  "/markdown-nice/precache-manifest.6a104a9bc6048489273f32c9d4d9716e.js"
+  "/markdown-nice/precache-manifest.8dd54d56b51102da7319375a0a723a9a.js"
 );
 
 workbox.skipWaiting();
