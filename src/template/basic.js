@@ -442,17 +442,33 @@ export default `/*默认样式，最佳实践*/
   background: #eee;
   padding: 16px;
   display: flex;
+  overflow: hidden;
 }
 #nice .qrcode-root > .qrcode-left {
   flex: 1;
   display: flex;
   flex-direction: column;
   padding-right: 8px;
+  overflow: hidden;
 }
 #nice .qrcode-root > .qrcode-left > .qrcode-title {
   color: #666;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+#nice .qrcode-root > .qrcode-left > .qrcode-sub-title {
+  color: #666;
+  font-size: 12px;
+  padding: 0;
 }
 #nice .qrcode-root > .qrcode-left > .qrcode-href {
+  font-size: 12px;
   color: #999;
   padding: 0;
   overflow : hidden;

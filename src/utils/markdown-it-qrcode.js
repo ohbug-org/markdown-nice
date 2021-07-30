@@ -1,7 +1,7 @@
 import QRCode from "yaqrcode";
 
 function makeRule(md) {
-  return function replaceLinkWithQrCode() {
+  return function replaceLinkWithQrCode(state) {
     md.renderer.rules.link_open = function replaceOpen(tokens) {
       const open = tokens.find((v) => v.type === "link_open");
       const text = tokens.find((v) => v.type === "text");
@@ -12,7 +12,7 @@ function makeRule(md) {
         if (href) {
           return `<section class="qrcode-root">
           <section class="qrcode-left">
-            <strong class="qrcode-title">长按识别二维码查看原文</strong><p class="qrcode-href">${href}</p>
+            <p class="qrcode-title">${textContent}</p><p class="qrcode-sub-title">长按识别二维码查看原文</p><p class="qrcode-href">${href}</p>
           </section>
           <section class="qrcode-right">
             <img class="qrcode-img" src="${QRCode(href)}" alt="${textContent}" />
@@ -20,6 +20,13 @@ function makeRule(md) {
         }
       }
       return `<section>`;
+    };
+    md.renderer.rules.text = function replaceText(tokens) {
+      const [link_open, text, link_close] = tokens;
+      if (link_open && text && link_close && link_open.type === "link_open" && link_close.type === "link_close") {
+        return "";
+      }
+      return tokens.find((v) => v.type === "text").content;
     };
     md.renderer.rules.link_close = function replaceClose() {
       return "</section>";
