@@ -1,7 +1,7 @@
 import QRCode from "yaqrcode";
 
 function makeRule(md) {
-  return function replaceLinkWithQrCode(state) {
+  return function replaceLinkWithQrCode() {
     md.renderer.rules.link_open = function replaceOpen(tokens) {
       const open = tokens.find((v) => v.type === "link_open");
       const text = tokens.find((v) => v.type === "text");
